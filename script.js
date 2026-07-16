@@ -55,7 +55,7 @@
   }
 
   const revealTargets = document.querySelectorAll(
-    '.service-card, .process-step, .about-content, .about-visual, .section-header, .contact-info, .contact-form, .hero-logo-wrap'
+    '.service-card, .process-step, .about-content, .section-header, .contact-info, .contact-form, .hero-logo-wrap'
   );
 
   revealTargets.forEach(function (el) {

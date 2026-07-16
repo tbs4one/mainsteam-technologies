@@ -78,25 +78,6 @@
             <a href="process.html" class="btn btn-secondary">See Our Process</a>
           </div>
         </div>
-        <div class="about-visual" aria-hidden="true">
-          <div class="code-window">
-            <div class="code-header">
-              <span class="code-dot"></span>
-              <span class="code-dot"></span>
-              <span class="code-dot"></span>
-              <span class="code-title">infrastructure.sql</span>
-            </div>
-            <pre class="code-body"><code><span class="code-keyword">CREATE</span> <span class="code-keyword">TABLE</span> <span class="code-table">clients</span> (
-  <span class="code-col">id</span>       <span class="code-type">SERIAL</span> <span class="code-keyword">PRIMARY KEY</span>,
-  <span class="code-col">name</span>     <span class="code-type">VARCHAR</span>(255),
-  <span class="code-col">status</span>   <span class="code-type">VARCHAR</span>(50) <span class="code-keyword">DEFAULT</span> <span class="code-string">'active'</span>
-);
-
-<span class="code-comment">-- MainSteam: Built for reliability</span>
-<span class="code-keyword">SELECT</span> <span class="code-func">COUNT</span>(*) <span class="code-keyword">FROM</span> clients
-<span class="code-keyword">WHERE</span> status = <span class="code-string">'thriving'</span>;</code></pre>
-          </div>
-        </div>
       </div>
     </section>
   </main>
