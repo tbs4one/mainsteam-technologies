@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About MainSteam Technologies — IT consultancy specializing in databases, infrastructure, support, and AI.">
+  <title>About | MainSteam Technologies</title>
+  <link rel="icon" type="image/png" href="assets/mainsteam-logo-3d.png">
+  <link rel="apple-touch-icon" href="assets/mainsteam-logo-3d.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-3d logo-3d--nav" data-logo-3d data-size="44" data-interactive="false" aria-hidden="true">
+          <img class="logo-fallback" src="assets/mainsteam-logo-3d.png" alt="" width="44" height="44">
+        </span>
+        <span class="logo-text">MainSteam<span class="logo-accent">Tech</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-tag">About Us</span>
+        <h1 class="page-title">Technology partners you can trust</h1>
+        <p class="page-desc">We specialize in the infrastructure and data layers that power successful organizations.</p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-content">
+          <p>MainSteam Technologies is a full-service IT consultancy specializing in the infrastructure and data layers that power successful organizations. We combine deep technical expertise with a practical, business-first approach.</p>
+          <p>Whether you're scaling a startup database, migrating to the cloud, or exploring how AI can transform your operations — we deliver solutions that are secure, maintainable, and built to last.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">✓</div>
+              <div>
+                <strong>Proven expertise</strong>
+                <span>Seasoned engineers across DB, DevOps, and AI</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">✓</div>
+              <div>
+                <strong>Transparent communication</strong>
+                <span>Clear timelines, honest assessments, no jargon</span>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">✓</div>
+              <div>
+                <strong>Long-term partnership</strong>
+                <span>We grow with you, not just one-off projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="page-cta page-cta--left">
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+            <a href="process.html" class="btn btn-secondary">See Our Process</a>
+          </div>
+        </div>
+        <div class="about-visual" aria-hidden="true">
+          <div class="code-window">
+            <div class="code-header">
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-title">infrastructure.sql</span>
+            </div>
+            <pre class="code-body"><code><span class="code-keyword">CREATE</span> <span class="code-keyword">TABLE</span> <span class="code-table">clients</span> (
+  <span class="code-col">id</span>       <span class="code-type">SERIAL</span> <span class="code-keyword">PRIMARY KEY</span>,
+  <span class="code-col">name</span>     <span class="code-type">VARCHAR</span>(255),
+  <span class="code-col">status</span>   <span class="code-type">VARCHAR</span>(50) <span class="code-keyword">DEFAULT</span> <span class="code-string">'active'</span>
+);
+
+<span class="code-comment">-- MainSteam: Built for reliability</span>
+<span class="code-keyword">SELECT</span> <span class="code-func">COUNT</span>(*) <span class="code-keyword">FROM</span> clients
+<span class="code-keyword">WHERE</span> status = <span class="code-string">'thriving'</span>;</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo--footer">
+          <img class="logo-footer-img" src="assets/mainsteam-logo-3d.png" alt="" width="40" height="40">
+          <span class="logo-text">MainSteam<span class="logo-accent">Tech</span></span>
+        </a>
+        <p>Database · Systems · Support · AI</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:engrtijanibabatunde@gmail.com">engrtijanibabatunde@gmail.com</a>
+        <a href="mailto:tbs4one@live.com">tbs4one@live.com</a>
+        <a href="tel:+2348125757526">+2348125757526</a>
+        <div class="footer-social">
+          <a href="https://github.com/tbs4one" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/tbs4one" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> MainSteam Technologies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="logo-3d.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
