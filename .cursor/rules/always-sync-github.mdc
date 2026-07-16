@@ -1,0 +1,16 @@
+---
+description: Always commit and push project changes to GitHub
+alwaysApply: true
+---
+
+# Always Sync to GitHub
+
+After finishing any code or project changes in this repo:
+
+1. Commit the relevant changes with a clear message (follow the repo's git commit protocol).
+2. Push to `origin` on the current branch (`git push -u origin HEAD` if upstream is missing).
+3. Confirm the branch is up to date with remote (`git status`).
+
+Do this without waiting for the user to ask, unless they explicitly say not to push.
+
+Never commit secrets (`.env`, credentials, tokens). Never force-push to `main`/`master`.
