@@ -109,4 +109,91 @@
       }, 5000);
     });
   }
+
+  /* OLAS Technologies & General Merchandise — 24hr live chat */
+  (function initOlasChat() {
+    const root = document.querySelector('[data-olas-chat]');
+    if (!root) return;
+
+    const toggle = document.getElementById('olasChatToggle');
+    const panel = document.getElementById('olasChatPanel');
+    const closeBtn = document.getElementById('olasChatClose');
+    const openBtn = document.getElementById('olasChatOpenBtn');
+    const form = document.getElementById('olasChatForm');
+    const input = document.getElementById('olasChatInput');
+    const messages = document.getElementById('olasChatMessages');
+    const phoneDisplay = '08038387515';
+    const phoneE164 = '2348038387515';
+    const email = 'tbs4one@live.com';
+
+    function addBubble(text, role) {
+      const bubble = document.createElement('div');
+      bubble.className = 'olas-chat-bubble olas-chat-bubble--' + role;
+      bubble.textContent = text;
+      messages.appendChild(bubble);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function setOpen(isOpen) {
+      panel.hidden = !isOpen;
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      if (isOpen && messages.childElementCount === 0) {
+        addBubble(
+          'Welcome to OLAS Technologies & General Merchandise. We are online 24 hours. How can we help you today?',
+          'bot'
+        );
+        addBubble(
+          'Official email: ' + email + ' · Phone: ' + phoneDisplay,
+          'bot'
+        );
+      }
+      if (isOpen) {
+        input.focus();
+      }
+    }
+
+    toggle.addEventListener('click', function () {
+      setOpen(panel.hidden);
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        setOpen(false);
+      });
+    }
+
+    if (openBtn) {
+      openBtn.addEventListener('click', function () {
+        setOpen(true);
+      });
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+
+      addBubble(text, 'user');
+      input.value = '';
+
+      addBubble(
+        'Connecting you now for a 24hr reply via WhatsApp… You can also email ' +
+          email +
+          ' or call ' +
+          phoneDisplay +
+          '.',
+        'bot'
+      );
+
+      const waUrl =
+        'https://wa.me/' +
+        phoneE164 +
+        '?text=' +
+        encodeURIComponent(
+          'Hello OLAS Technologies & General Merchandise,\n\n' + text
+        );
+
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    });
+  })();
 })();
